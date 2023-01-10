@@ -1,4 +1,4 @@
-import { PolygonIcon, StackLinesIcon } from "components/svgs";
+import { CircleDownIcon, PolygonIcon, StackLinesIcon } from "components/svgs";
 
 const IntroSection = () => {
     return (
@@ -35,6 +35,9 @@ const IntroSection = () => {
             </div>
             <div className="absolute bottom-0 left-0 w-full h-[131px] bg-primary">
                 <div className="relative w-full h-full">
+                    <div className="absolute top-[-66px] left-[158px] translate-y-[-100%]">
+                        <CircleDownIcon />
+                    </div>
                     <div className="absolute top-0 right-[58px] translate-y-[-50%]">
                         <PolygonIcon />
                     </div>

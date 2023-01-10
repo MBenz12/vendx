@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 @import url(https://fonts.googleapis.com/css2?family=Rubik&display=swap);
-@import url(https://fonts.cdnfonts.com/css/akira-expanded);
 @import url(https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap);
 
 @font-face {
-    font-family: 'Akira Expanded';
-    src: url(/public/fonts/akira_expanded/Akira\ Expanded\ Demo.otf);
+  font-family: "Akira Expanded";
+  src: url(/public/fonts/akira_expanded/Akira\ Expanded\ Demo.otf);
 }
 
 ::-webkit-scrollbar {
@@ -34,11 +33,12 @@
     #30d9ba 100%,
     rgba(217, 217, 217, 0) 100%
   );
-  --gradient2: radial-gradient(
-    80.77% 80.77% at 23.02% 16.54%,
-    rgba(49, 49, 49, 0.8) 0%,
-    rgba(33, 33, 33, 0.8) 72.4%
-  );
+  --gradient2: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    radial-gradient(
+      96.61% 92.73% at 13.01% 16.51%,
+      #292929 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
 }
 
 .text-gradient {
@@ -55,6 +55,14 @@
   -webkit-text-fill-color: transparent;
 }
 
+.bg-gradient1:hover {
+  background-image: var(--graident1);
+}
+
+.bg-gradient2 {
+  background-image: var(--gradient2);
+}
+
 .section {
-  @apply w-full min-h-screen flex justify-center bg-black;
+  @apply w-full min-h-screen flex justify-center bg-black relative;
 }
