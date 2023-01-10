@@ -1,3 +1,4 @@
+import Footer from "components/Footer";
 import FaqSection from "components/sections/FaqSection";
 import GallerySection from "components/sections/GallerySection";
 import IntroSection from "components/sections/IntroSection";
@@ -10,6 +11,7 @@ const HomePage = () => {
             <RoadmapSection />
             <GallerySection />
             <FaqSection />
+            <Footer />
         </main>
     );
 };

@@ -48,14 +48,18 @@
     #8973d9 47.6%,
     #73bcd9 50.93%,
     #30d9ba 55.36%,
-    rgba(217, 217, 217, 0) 55.36%
+    rgba(217, 217, 217, 0) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.bg-gradient1:hover {
+.bg-gradient1-hover:hover {
+  background-image: var(--graident1);
+}
+
+.bg-gradient1 {
   background-image: var(--graident1);
 }
 
