@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css2?family=Rubik&display=swap);
+@import url(https://fonts.cdnfonts.com/css/akira-expanded);
+@import url(https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap);
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url(/public/fonts/akira_expanded/Akira\ Expanded\ Demo.otf);
+}
+
+::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e4e4e400;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #898989;
+  border-radius: 100px;
+}
+
+:root {
+  --graident1: linear-gradient(
+    150.75deg,
+    #f27eca 7.73%,
+    #8973d9 36.87%,
+    #73bcd9 68.45%,
+    #30d9ba 100%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  --gradient2: radial-gradient(
+    80.77% 80.77% at 23.02% 16.54%,
+    rgba(49, 49, 49, 0.8) 0%,
+    rgba(33, 33, 33, 0.8) 72.4%
+  );
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    105.85deg,
+    #f27eca 43.84%,
+    #8973d9 47.6%,
+    #73bcd9 50.93%,
+    #30d9ba 55.36%,
+    rgba(217, 217, 217, 0) 55.36%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section {
+  @apply w-full min-h-screen flex justify-center bg-black;
+}
