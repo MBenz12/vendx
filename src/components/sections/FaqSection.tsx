@@ -3,14 +3,14 @@ import { useState } from "react";
 
 const QuestionBox = ({ className, title, content, collapse = true, handleCollapse }: { className?: string, title: string, content: string, collapse: boolean, handleCollapse: () => any }) => {
     return (
-        <div className={"px-[63px] py-[40px] rounded-[20px] border-[3px] border-white font-primary text-white transition-all duration-500 " + className || ""}>
+        <div className={"px-[63px] py-[40px] rounded-[20px] border-[3px] border-white font-primary text-white " + className || ""}>
             <div className="flex justify-between items-center">
                 <p className="font-bold text-[35px] leading-[41px]">{title}</p>
                 <div className="cursor-pointer h-[31px] flex items-center" onClick={handleCollapse}>
                     {collapse ? <PlusIcon /> : <MinusIcon />}
                 </div>
             </div>
-            {!collapse && <p className="mt-[40px] text-[30px] leading-[36px]">{content}</p>}
+            <p className={"text-[30px] leading-[36px] transition-height duration-1000 " + (collapse ? "h-0 mt-0" : "mt-[40px]")}>{!collapse && content}</p>
         </div>
     )
 }

@@ -5,15 +5,17 @@ const IntroSection = () => {
         <section className="section">
             <div className="container mt-[82px]">
                 <div className="flex w-full justify-end">
-                    <div className="translate-x-[50%]">
+                    <div className="translate-x-[0%]">
                         <StackLinesIcon />
                     </div>
                 </div>
                 <div className="flex w-full justify-center">
-                    <img src="/logo.png" alt="" className="w-[671px]" />
+                    <img src="/logo.png" alt="" className="w-[30vw]" />
                 </div>
-                <div className="mt-[10px] text-right font-extrabold text-[25px] leading-[29px] font-title text-primary">
-                    {'// Lorem ipsum dolor'}
+                <div className="mt-[10px] text-right font-extrabold text-[25px] leading-[29px] font-title">
+                    <div className="fo-mask relative">
+                        <span className="text-primary">{'// Lorem ipsum dolor'}</span>
+                    </div>
                 </div>
                 <div className="flex justify-between">
                     <div className="flex gap-[50px]">
@@ -27,16 +29,18 @@ const IntroSection = () => {
                             <p>FAQ</p>
                         </div>
                     </div>
-                    <div className="w-[420px] font-secondary text-[25px] leading-[32px] text-right text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+                    <div className="w-[420px] font-secondary text-[25px] leading-[32px] text-right text-secondary reveal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 w-full flex justify-center z-10">
-                <img src="/title_image.png" alt="" className="w-[847px]" />
+                <img src="/title_image.png" alt="" className="w-[50vw]" />
             </div>
             <div className="absolute bottom-0 left-0 w-full h-[131px] bg-primary">
                 <div className="relative w-full h-full">
                     <div className="absolute top-[-66px] left-[158px] translate-y-[-100%]">
-                        <CircleDownIcon />
+                        <div className="animate-bounce">
+                            <CircleDownIcon />
+                        </div>
                     </div>
                     <div className="absolute top-0 right-[58px] translate-y-[-50%]">
                         <PolygonIcon />
