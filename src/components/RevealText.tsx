@@ -1,5 +1,4 @@
 import gsap, { Power3 } from "gsap";
-import { useEffect } from "react";
 
 let splitWords = function (selector: any) {
     var elements = document.querySelectorAll(selector);
@@ -80,20 +79,15 @@ const load = () => {
             yPercent: 100,
             // @ts-ignore
             ease: Power3.out,
-            stagger: 0.25,
-            delay: 0.2
+            stagger: 0.5,
+            delay: 0.5
         });
     });
     console.log(revealLines);
 }
 
 const RevealText = () => {
-    useEffect(() => {
-        window.addEventListener("load", load);
-        return () => {
-            window.removeEventListener('load', load);
-        };
-    }, []);
+    load();
     return (
         <div></div>
     );

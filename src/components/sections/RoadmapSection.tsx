@@ -1,3 +1,7 @@
+import RevealText from 'components/RevealText';
+import { useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
+
 const RodmapBox = () => {
     return (
         <div className="rounded-[15px] hover:p-[5px] max-w-[512px] mx-auto w-full bg-gradient1-hover hover:border-0 border-2 border-[#1A1A1A]" style={{ aspectRatio: 1.25 }}>
@@ -10,18 +14,20 @@ const RodmapBox = () => {
 }
 
 const RoadmapSection = () => {
+    const textRef = useRef<any>();
+    const { inViewport } = useInViewport(textRef);
     return (
         <section className="section flex-col gap-[90px]" id='roadmap'>
             <div className='container my-10'>
                 <div className="ml-10">
                     <div className="w-fit font-extrabold font-title text-[80px] md:text-[60px] sm:text-[40px] xs:text-3xl leading-[115px] md:leading-[75px] sm:leading-[45px] text-white">
-                        <div className="fo-mask relative">
+                        <div className={"relative" + (inViewport ? " fo-mask" : "")}>
                             <span className="white">
                                 {'// VENDMAP'}
                             </span>
                         </div>
                     </div>
-                    <p className="mt-[15px] max-w-[800px] font-primary text-[36px] leading-[42px] text-secondary sm:text-2xl reveal-text">
+                    <p ref={textRef} className={"mt-[15px] max-w-[800px] font-primary text-[36px] leading-[42px] text-secondary sm:text-2xl" + (inViewport ? " reveal-text" : "")}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                     </p>
                 </div>
@@ -31,6 +37,7 @@ const RoadmapSection = () => {
                     <RodmapBox />
                 </div>
             </div>
+            <RevealText />
         </section>
     );
 }

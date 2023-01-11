@@ -1,4 +1,7 @@
+import RevealText from "components/RevealText";
 import { CircleDownIcon, PolygonIcon, StackLinesIcon } from "components/svgs";
+import { useRef } from "react";
+import { useInViewport } from "react-in-viewport";
 
 const IntroSection = () => {
     const handleDown = () => {
@@ -14,7 +17,8 @@ const IntroSection = () => {
             behavior: 'smooth'
         });
     }
-
+    const textRef = useRef<any>();
+    const { inViewport } = useInViewport(textRef);
     return (
         <section className="section">
             <div className="container mt-[82px] md:mt-10">
@@ -27,7 +31,7 @@ const IntroSection = () => {
                     <img src="/logo.png" alt="" className="w-[500px]" />
                 </div>
                 <div className="mt-10 text-right font-extrabold text-[25px] leading-[29px] font-title">
-                    <div className="fo-mask relative">
+                    <div className={"relative" + (inViewport ? " fo-mask" : "")}>
                         <span className="text-primary">{'// Lorem ipsum dolor'}</span>
                     </div>
                 </div>
@@ -44,7 +48,7 @@ const IntroSection = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="w-[420px] font-secondary text-[25px] leading-[32px] text-right text-secondary reveal-text sm:order-[-1] sm:ml-auto sm:w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+                    <div ref={textRef} className={"w-[420px] font-secondary text-[25px] leading-[32px] text-right text-secondary sm:order-[-1] sm:ml-auto sm:w-full" + (inViewport ? " reveal-text" : "")}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 w-full flex justify-center z-10">
@@ -62,6 +66,7 @@ const IntroSection = () => {
                     </div>
                 </div>
             </div>
+            <RevealText />
         </section>
     );
 }
