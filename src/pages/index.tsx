@@ -6,7 +6,7 @@ import RoadmapSection from "components/sections/RoadmapSection";
 
 const HomePage = () => {
     return (
-        <main>
+        <main className='overflow-x-hidden'>
             <IntroSection />
             <RoadmapSection />
             <GallerySection />

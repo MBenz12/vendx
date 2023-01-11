@@ -11,7 +11,7 @@ export const TriangleIcon = () => (
 );
 
 export const CircleDownIcon = () => (
-    <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" className='circle-icon'>
         <circle cx="64" cy="64" r="63" stroke="white" strokeWidth="2" />
         <path d="M61.2698 88.9911C61.8556 89.5769 62.8053 89.5769 63.3911 88.9911L72.937 79.4452C73.5228 78.8594 73.5228 77.9096 72.937 77.3238C72.3513 76.7381 71.4015 76.7381 70.8157 77.3238L62.3304 85.8091L53.8452 77.3238C53.2594 76.7381 52.3096 76.7381 51.7238 77.3238C51.1381 77.9096 51.1381 78.8594 51.7238 79.4452L61.2698 88.9911ZM60.8304 40.0696L60.8304 87.9305L63.8304 87.9305L63.8304 40.0696L60.8304 40.0696Z" fill="white" />
     </svg>

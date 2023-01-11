@@ -28,6 +28,10 @@ body {
   border-radius: 100px;
 }
 
+.container {
+  @apply !w-full px-10 md:px-6;
+}
+
 :root {
   --graident1: linear-gradient(
     150.75deg,
@@ -77,10 +81,13 @@ body {
 
 .carousel {
   position: relative;
-  width: 473px;
-  height: 647px;
   perspective: 500px;
   transform-style: preserve-3d;
+  @apply w-[400px] h-[500px] lg:w-[320px] lg:h-[400px]
+}
+
+.carousel svg {
+  @apply sm:w-8 sm:h-8;
 }
 
 .card-container {
@@ -120,12 +127,11 @@ body {
 }
 
 .nav.left {
-  transform: translateX(calc(-160px)) translatey(-50%);
+  @apply translate-x-[160px] -translate-y-1/2 sm:-translate-x-[120px] xs:translate-x-2
 }
 
 .nav.right {
-  right: 0;
-  transform: translateX(calc(160px)) translatey(-50%);
+  @apply right-0 translate-x-[160px] -translate-y-1/2 sm:translate-x-[120px] xs:-translate-x-2
 }
 
 .fo-mask {
@@ -210,4 +216,8 @@ body {
   100% {
     transform: translate3d(110%, 0, 0);
   }
+}
+
+.circle-icon {
+  @apply w-20 h-20;
 }
