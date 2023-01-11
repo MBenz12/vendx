@@ -148,6 +148,12 @@ body {
 	animation: show-white 0s forwards 0.4s;
 }
 
+.fo-mask span.black {
+	color: transparent;
+	-webkit-animation: show-black 0s forwards 0.4s;
+	animation: show-black 0s forwards 0.4s;
+}
+
 .fo-mask:after {
 	content: '';
 	position: absolute;
@@ -193,6 +199,23 @@ body {
 	}
 	100% {
 		color: white;
+	}
+}
+
+@-webkit-keyframes show-black {
+	0% {
+		color: transparent;
+	}
+	100% {
+		color: black;
+	}
+}
+@keyframes show-black {
+	0% {
+		color: transparent;
+	}
+	100% {
+		color: black;
 	}
 }
 
