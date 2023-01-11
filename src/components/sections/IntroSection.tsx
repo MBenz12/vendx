@@ -33,12 +33,12 @@ const IntroSection = () => {
                 </div>
                 <div className="flex justify-between sm:flex-col sm:gap-8">
                     <div className="flex gap-[50px] z-20 relative xs:mx-auto">
-                        <div className="w-0.5 h-[150px] bg-[#3A3A3A] relative">
+                        {/* <div className="w-0.5 h-[150px] bg-[#3A3A3A] relative">
                             <div className="absolute left-0 top-0 translate-x-[-50%] w-[20px] h-[20px] rounded-full bg-primary"></div>
-                        </div>
+                        </div> */}
                         <div className="flex flex-col font-secondary text-secondary text-[20px] font-bold leading-[25px] gap-[18px]">
                             {['INTRO', 'roadmap', 'gallery', 'faq'].map((item, index) => (
-                                <p className="uppercase cursor-pointer sm:text-white first:text-primary" key={index} onClick={() => {
+                                <p className="uppercase cursor-pointer sm:text-white hover:text-primary" key={index} onClick={() => {
                                     handleScrollDown(item);
                                 }}>{item}</p>
                             ))}
