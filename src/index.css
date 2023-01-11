@@ -168,6 +168,10 @@ body {
 	animation: left-to-right 3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
+.fo-mask.black-mask:after {
+  background: black;
+}
+
 @-webkit-keyframes show {
 	0% {
 		color: transparent;

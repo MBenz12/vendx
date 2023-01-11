@@ -59,7 +59,7 @@ const GallerySection = () => {
             </div>
             <div className='flex max-w-[1400px] w-full justify-between items-center md:flex-col md:gap-[100px] my-3'>
                 <div>
-                    <div className={"relative" + (inViewport ? " fo-mask" : "")}>
+                    <div className={"relative" + (inViewport ? " fo-mask black-mask" : "")}>
                         <span className="black">
                             <p className="max-w-[469px] w-full text-[60px] leading-[68px] font-title font-extrabold lg:text-4xl">{"// ARTWORK"}</p>
                         </span>
