@@ -21,7 +21,7 @@ const RoadmapSection = () => {
                             </span>
                         </div>
                     </div>
-                    <p className="mt-[15px] max-w-[800px] font-primary text-[36px] leading-[42px] text-secondary sm:text-2xl">
+                    <p className="mt-[15px] max-w-[800px] font-primary text-[36px] leading-[42px] text-secondary sm:text-2xl reveal-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                     </p>
                 </div>
