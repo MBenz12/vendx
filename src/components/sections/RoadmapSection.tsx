@@ -1,5 +1,5 @@
 import RevealText from 'components/RevealText';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useInViewport } from 'react-in-viewport';
 
 const RodmapBox = () => {
@@ -16,6 +16,9 @@ const RodmapBox = () => {
 const RoadmapSection = () => {
     const textRef = useRef<any>();
     const { inViewport } = useInViewport(textRef);
+    useEffect(() => {
+        RevealText();
+    }, [inViewport])
     return (
         <section className="section flex-col gap-[90px]" id='roadmap'>
             <div className='container my-10'>
@@ -37,7 +40,6 @@ const RoadmapSection = () => {
                     <RodmapBox />
                 </div>
             </div>
-            <RevealText />
         </section>
     );
 }

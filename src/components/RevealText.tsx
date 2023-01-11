@@ -64,8 +64,7 @@ let getLines = function (el: { querySelectorAll: (arg0: string) => any; }) {
 const load = () => {
     splitLines(".reveal-text");
     let revealText = document.querySelectorAll(".reveal-text");
-    // gsap.registerPlugin(ScrollTrigger);
-    let revealLines = revealText.forEach((element) => {
+    revealText.forEach((element) => {
         const lines = element.querySelectorAll(".words");
 
         let tl = gsap.timeline({
@@ -79,18 +78,10 @@ const load = () => {
             yPercent: 100,
             // @ts-ignore
             ease: Power3.out,
-            stagger: 0.5,
-            delay: 0.5
+            stagger: 0.3,
+            delay: 0.1
         });
     });
-    console.log(revealLines);
 }
 
-const RevealText = () => {
-    load();
-    return (
-        <div></div>
-    );
-};
-
-export default RevealText;
+export default load;
