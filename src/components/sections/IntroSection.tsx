@@ -1,4 +1,4 @@
-import { CircleDownIcon, PolygonIcon, StackLinesIcon } from "components/svgs";
+import { CircleDownIcon, PolygonIcon } from "components/svgs";
 import { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
 
@@ -21,11 +21,11 @@ const IntroSection = () => {
     return (
         <section className="section">
             <div className="container mt-[82px] md:mt-10">
-                <div className="flex w-full justify-end">
+                {/* <div className="flex w-full justify-end">
                     <div className="translate-x-[0%]">
                         <StackLinesIcon />
                     </div>
-                </div>
+                </div> */}
                 <div className="flex w-full justify-center">
                     <img src="/logo.png" alt="" className="w-[500px]" />
                 </div>

@@ -59,9 +59,13 @@ body {
 	-webkit-text-fill-color: transparent;
 }
 
-.bg-gradient1-hover:hover {
-	background-image: var(--graident1);
+.text-gradient1 {
+	background-image:  linear-gradient(150.75deg, #F27ECA 7.73%, #8973D9 36.87%, #73BCD9 68.45%, #30D9BA 97.08%, rgba(217, 217, 217, 0) 97.08%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
+
 
 .bg-gradient1 {
 	background-image: var(--graident1);

@@ -10,7 +10,9 @@ const QuestionBox = ({ className, title, content, collapse = true, handleCollaps
                     {collapse ? <PlusIcon /> : <MinusIcon />}
                 </div>
             </div>
-            <p className={"text-[30px] leading-[36px] transition-height duration-1000 sm:text-2xl xs:text-xl " + (collapse ? "h-0 mt-0" : "mt-[40px] sm:mt-5")}>{!collapse && content}</p>
+            <div className={"transition-all duration-1000 overflow-hidden " + (collapse ? "max-h-0": "max-h-[350px]")}>
+                <p className={"text-[30px] leading-[36px] sm:text-2xl xs:text-xl mt-[40px] sm:mt-5"}>{content}</p>
+            </div>
         </div>
     )
 }
