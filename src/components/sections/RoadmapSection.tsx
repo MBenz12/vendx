@@ -19,7 +19,7 @@ const RodmapBox = ({ background, title, contents, color }: { background: string,
                     </div>
                 </div>
                 <div className={"relative w-full h-full text-white flex justify-center " + (hover ? "bg-black/50" : "")}>
-                    <div className={"flex flex-col justify-center items-center " + (!hover ? "mt-[50%]" : "gap-5")}>
+                    <div className={"flex flex-col justify-center items-center " + (!hover ? "mt-[30%]" : "gap-5")}>
                         <p className={"font-secondary " + (hover ? "text-gradient1 text-[40px] leading-[47px] sm:text-[30px]" : "text-[30px] sm:text-[24px]")}>{title}</p>
                         {hover &&
                             <div className="flex flex-col items-center gap-4">
