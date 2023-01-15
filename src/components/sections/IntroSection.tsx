@@ -21,25 +21,15 @@ const IntroSection = () => {
     return (
         <section className="section">
             <div className="container mt-[82px] md:mt-10">
-                {/* <div className="flex w-full justify-end">
-                    <div className="translate-x-[0%]">
-                        <StackLinesIcon />
-                    </div>
-                </div> */}
                 <div className="flex w-full justify-center">
                     <img src="/logo.png" alt="" className="w-[500px]" />
                 </div>
-                <div className="mt-10 text-right font-extrabold text-[25px] leading-[29px] font-title">
-                    <div className={"relative" + (inViewport ? " fo-mask" : "")}>
-                        <span className="text-primary">{'// Lorem ipsum dolor'}</span>
-                    </div>
-                </div>
-                <div className="flex justify-between sm:flex-col sm:gap-8">
+                <div className="flex justify-between sm:flex-col sm:gap-8 mt-10 ">
                     <div className="flex gap-[50px] z-20 relative xs:mx-auto">
                         {/* <div className="w-0.5 h-[150px] bg-[#3A3A3A] relative">
                             <div className="absolute left-0 top-0 translate-x-[-50%] w-[20px] h-[20px] rounded-full bg-primary"></div>
                         </div> */}
-                        <div className="flex flex-col font-secondary text-secondary text-[20px] font-bold leading-[25px] gap-[18px]">
+                        <div className="flex flex-col font-primary text-secondary text-[20px] font-bold leading-[25px] gap-[18px]">
                             {['INTRO', 'roadmap', 'gallery', 'faq'].map((item, index) => (
                                 <p className="uppercase cursor-pointer sm:text-white hover:text-primary" key={index} onClick={() => {
                                     handleScrollDown(item);
@@ -47,7 +37,14 @@ const IntroSection = () => {
                             ))}
                         </div>
                     </div>
-                    <div ref={textRef} className={"w-[420px] font-secondary text-[25px] leading-[32px] text-right text-secondary sm:order-[-1] sm:ml-auto sm:w-full reveal-text"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+                    <div className="text-right font-extrabold text-[25px] leading-[29px] font-title">
+                        <div className={"relative" + (inViewport ? " fo-mask" : "")}>
+                            <span className="text-primary">{'// Lorem ipsum dolor'}</span>
+                        </div>
+                        <div ref={textRef} className={"w-[420px] font-primary text-[25px] leading-[32px] flex justify-end text-secondary sm:order-[-1] sm:ml-auto sm:w-full reveal-text"}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 w-full flex justify-center z-10">
