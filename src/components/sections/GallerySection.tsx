@@ -7,7 +7,7 @@ const ArtCard = ({ image, style }: { image: string, style: any }) => {
     return (
         <div className="card-container" style={style}>
             <div className="card">
-                <img src={image} alt="" className="w-full h-full" />
+                <img src={image} alt="" className="w-full h-full rounded-[18px]" />
             </div>
         </div>
     )
@@ -16,14 +16,10 @@ const MAX_VISIBILITY = 2;
 const GallerySection = () => {
     const [arts] = useState([
         '/art1.png',
-        '/art1.png',
-        '/art1.png',
-        '/art1.png',
-        '/art1.png',
-        '/art1.png',
-        '/art1.png',
+        '/art2.png',
+        '/art3.png',
     ]);
-    const [active, setActive] = useState(2);
+    const [active, setActive] = useState(1);
     const textRef = useRef<any>();
     const { inViewport } = useInViewport(textRef);
     useEffect(() => {

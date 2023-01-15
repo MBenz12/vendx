@@ -8,8 +8,12 @@ const Footer = () => {
             </div>
             <img src="/logo.png" alt="" className="w-[390px] md:w-[250px]" />
             <div className="flex gap-2 ml-auto sm:mx-auto mr-20">
-                <TwitterIcon />
-                <DiscordIcon />
+                <a href="https://twitter.com/VendXnfts" target="_blank" rel="noreferrer">
+                    <TwitterIcon />                    
+                </a>
+                <a href="https://discord.gg/vendx" target="_blank" rel="noreferrer">
+                    <DiscordIcon />
+                </a>
             </div>
         </footer>
     );
