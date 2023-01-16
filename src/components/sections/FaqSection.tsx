@@ -21,19 +21,15 @@ const FaqSection = () => {
     const questions = [
         {
             question: "WHEN MINT?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+            answer: "April 2023",
         },
         {
             question: "What is the supply?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+            answer: " 9999 VX Cyborgs",
         },
         {
             question: "How much is mint?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-        },
-        {
-            question: "Another question?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+            answer: "No matter what Solana will look like, we going with an estimated 120$ Value mint!",
         },
     ];
     const [collapses, setCollapses] = useState<boolean[]>([false, true, true, true]);

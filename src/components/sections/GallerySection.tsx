@@ -18,6 +18,7 @@ const GallerySection = () => {
         '/art1.png',
         '/art2.png',
         '/art3.png',
+        '/art4.png',
     ]);
     const [active, setActive] = useState(1);
     const textRef = useRef<any>();
