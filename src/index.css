@@ -73,7 +73,7 @@ body {
 	position: relative;
 	perspective: 500px;
 	transform-style: preserve-3d;
-	@apply h-[500px] w-[400px] lg:h-[400px] lg:w-[320px];
+	@apply h-[450px] w-[450px] lg:h-[400px] lg:w-[320px];
 }
 
 .carousel svg {

@@ -18,9 +18,9 @@ const RodmapBox = ({ background, title, contents, color }: { background: string,
                         <div className={`absolute top-10 w-[150px] bg-black/0 shadow-[_0px_0px_80px_50px_${color}]`} ></div>
                     </div>
                 </div>
-                <div className={"relative w-full h-full text-white flex justify-center " + (hover ? "bg-black/50" : "")}>
+                <div className={"relative w-full h-full text-white flex justify-center " + (hover ? "bg-black/50 rounded-[15px]" : "")}>
                     <div className={"flex flex-col justify-center items-center " + (!hover ? "mt-[30%]" : "gap-5")}>
-                        <p className={"font-secondary " + (hover ? "text-gradient1 text-[40px] leading-[47px] sm:text-[30px]" : "text-[30px] sm:text-[24px]")}>{title}</p>
+                        <p className={"font-primary " + (hover ? "text-gradient1 text-[40px] leading-[47px] sm:text-[30px]" : "text-[30px] sm:text-[24px]")}>{title}</p>
                         {hover &&
                             <div className="flex flex-col items-center gap-4">
                                 {contents.concat("_1", "_2").slice(0, 4).map((content => (
