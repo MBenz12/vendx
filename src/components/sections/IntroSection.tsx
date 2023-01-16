@@ -39,10 +39,12 @@ const IntroSection = () => {
                     </div>
                     <div className="text-right font-extrabold text-[25px] leading-[29px] font-title">
                         <div className={"relative" + (inViewport ? " fo-mask" : "")}>
-                            <span className="text-primary">{'// Lorem ipsum dolor'}</span>
+                            <span className="text-primary">// A NEW ERA OF NFTS</span>
                         </div>
-                        <div ref={textRef} className={"w-[420px] font-primary text-[25px] leading-[32px] flex justify-end text-secondary sm:order-[-1] sm:ml-auto sm:w-full reveal-text"}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        <div ref={textRef} className={"max-w-[650px] font-primary text-[25px] leading-[32px] flex justify-end text-secondary sm:order-[-1] sm:ml-auto sm:w-full reveal-text"}>
+                            Vending machines powered by NFTs. 
+                            Build with us by investing into thousands of vending machines across the world. 
+                            Earn passive income by holding a VendX NFT.
                         </div>
                     </div>
                 </div>

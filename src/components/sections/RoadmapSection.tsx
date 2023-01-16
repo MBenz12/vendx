@@ -86,7 +86,7 @@ const RoadmapSection = () => {
                         </div>
                     </div>
                     <p ref={textRef} className={"mt-[15px] max-w-[800px] font-primary text-[36px] leading-[42px] text-secondary sm:text-2xl" + (inViewport ? " reveal-text" : "")}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        We have plans to expand across Germany & Europe. We have the connections, knowledge & tools to make VendX a revolutionary way to invest in a solid, stable & scalable business.
                     </p>
                 </div>
                 <div className="w-full sm:px-5 px-10 grid grid-cols-3 items-center justify-center gap-[25px] my-10 lg:grid-cols-2 sm:grid-cols-1">

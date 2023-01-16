@@ -67,7 +67,9 @@ const GallerySection = () => {
                             <path d="M61.8425 0.389893L49.5102 8.61033H0.402771V0.389893H61.8425ZM61.8425 0.389893H154" stroke="black" strokeWidth="2" strokeMiterlimit="10" />
                         </svg>
                     </div>
-                    <p ref={textRef} className={"mt-[35px] max-w-[374px] w-full font-primary text-secondary text-[36px] leading-[42px] lg:text-2xl" + (inViewport ? " reveal-text" : "")}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                    <p ref={textRef} className={"mt-[35px] max-w-[374px] w-full font-primary text-secondary text-[36px] leading-[42px] lg:text-2xl" + (inViewport ? " reveal-text" : "")}>
+                        Hand drawn cyborgs ready to ready to take over Solana
+                    </p>
                 </div>
                 <div className="carousel mx-[180px] flex-shrink-0 sm:mx-0">
                     {active > 0 && <button className='nav left' onClick={() => setActive(i => i - 1)}><CircleLeftIcon /></button>}
