@@ -78,7 +78,7 @@ const RoadmapSection = () => {
         <section className="section flex-col gap-[90px]" id='roadmap'>
             <div className='container my-10'>
                 <div className="ml-10">
-                    <div className="w-fit font-extrabold font-title text-[80px] md:text-[60px] sm:text-[40px] xs:text-3xl leading-[115px] md:leading-[75px] sm:leading-[45px] text-white">
+                    <div className="w-fit font-extrabold font-title text-[80px] md:text-[60px] sm:text-[40px] xs:text-3xl leading-[85px] md:leading-[65px] sm:leading-[35px] text-white">
                         <div className={"relative" + (inViewport ? " fo-mask" : "")}>
                             <span className="white">
                                 {'// VENDMAP'}
