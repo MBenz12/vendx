@@ -22,7 +22,7 @@ const GallerySection = () => {
     ]);
     const [active, setActive] = useState(1);
     const textRef = useRef<any>();
-    const { inViewport } = useInViewport(textRef);
+    const { inViewport, enterCount } = useInViewport(textRef);
     useEffect(() => {
         RevealText();
     }, [inViewport])
@@ -56,7 +56,7 @@ const GallerySection = () => {
             </div>
             <div className='flex max-w-[1400px] w-full justify-between items-center md:flex-col md:gap-[100px] my-3'>
                 <div>
-                    <div className={"relative" + (inViewport ? " fo-mask black-mask" : "")}>
+                    <div className={"relative" + (inViewport && enterCount === 1 ? " fo-mask black-mask" : "")}>
                         <span className="black">
                             <p className="max-w-[469px] w-full text-[60px] leading-[68px] font-title font-extrabold lg:text-4xl">{"// ARTWORK"}</p>
                         </span>
@@ -67,7 +67,7 @@ const GallerySection = () => {
                             <path d="M61.8425 0.389893L49.5102 8.61033H0.402771V0.389893H61.8425ZM61.8425 0.389893H154" stroke="black" strokeWidth="2" strokeMiterlimit="10" />
                         </svg>
                     </div>
-                    <p ref={textRef} className={"mt-[35px] max-w-[374px] w-full font-primary text-secondary text-[25px]" + (inViewport ? " reveal-text" : "")}>
+                    <p ref={textRef} className={"mt-[35px] max-w-[374px] w-full font-primary text-secondary text-[25px]" + (inViewport && enterCount === 1 ? " reveal-text" : "")}>
                         Hand drawn cyborgs ready to ready to take over Solana
                     </p>
                 </div>

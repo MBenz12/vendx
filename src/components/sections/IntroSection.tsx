@@ -17,7 +17,7 @@ const IntroSection = () => {
         });
     }
     const textRef = useRef<any>();
-    const { inViewport } = useInViewport(textRef);
+    const { inViewport, enterCount } = useInViewport(textRef);
     return (
         <section className="section">
             <div className="container mt-[82px] md:mt-10">
@@ -38,7 +38,7 @@ const IntroSection = () => {
                         </div>
                     </div>
                     <div className="text-right font-extrabold text-[25px] leading-[29px] font-title">
-                        <div className={"relative" + (inViewport ? " fo-mask" : "")}>
+                        <div className={"relative" + (inViewport && enterCount === 1 ? " fo-mask" : "")}>
                             <span className="text-primary">// A NEW ERA OF NFTS</span>
                         </div>
                         <div ref={textRef} className={"max-w-[700px] font-primary text-[25px] leading-[32px] flex justify-end text-secondary sm:order-[-1] sm:ml-auto sm:w-full reveal-text"}>

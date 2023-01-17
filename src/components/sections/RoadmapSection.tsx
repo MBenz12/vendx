@@ -37,7 +37,7 @@ const RodmapBox = ({ background, title, contents, color }: { background: string,
 
 const RoadmapSection = () => {
     const textRef = useRef<any>();
-    const { inViewport } = useInViewport(textRef);
+    const { inViewport, enterCount } = useInViewport(textRef);
     useEffect(() => {
         RevealText();
     }, [inViewport]);
@@ -79,13 +79,13 @@ const RoadmapSection = () => {
             <div className='container my-10'>
                 <div className="ml-10">
                     <div className="w-fit font-extrabold font-title text-[80px] md:text-[60px] sm:text-[40px] xs:text-3xl leading-[85px] md:leading-[65px] sm:leading-[35px] text-white">
-                        <div className={"relative" + (inViewport ? " fo-mask" : "")}>
+                        <div className={"relative" + (inViewport && enterCount === 1 ? " fo-mask" : "")}>
                             <span className="white">
                                 {'// VENDMAP'}
                             </span>
                         </div>
                     </div>
-                    <p ref={textRef} className={"mt-[15px] max-w-[800px] font-primary text-[25px] text-secondary sm:text-2xl" + (inViewport ? " reveal-text" : "")}>
+                    <p ref={textRef} className={"mt-[15px] max-w-[800px] font-primary text-[25px] text-secondary sm:text-2xl" + (inViewport && enterCount === 1 ? " reveal-text" : "")}>
                         We have plans to expand across Germany & Europe. We have the connections, knowledge & tools to make VendX a revolutionary way to invest in a solid, stable & scalable business.
                     </p>
                 </div>
