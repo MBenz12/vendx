@@ -23,8 +23,8 @@ const RodmapBox = ({ background, title, contents, color }: { background: string,
                         <p className={"font-primary " + (hover ? "text-gradient1 text-[40px] leading-[47px] sm:text-[30px]" : "text-[30px] sm:text-[24px]")}>{title}</p>
                         {hover &&
                             <div className="flex flex-col items-center gap-4">
-                                {contents.concat("_1", "_2").slice(0, 4).map((content => (
-                                    <p className={"text-white text-[30px] leading-[35px] sm:text-[24px] " + (content.startsWith("_") ? "opacity-0" : "")} key={content}>{content}</p>
+                                {contents.map((content => (
+                                    <p className={"text-white text-[25px] leading-[30px] text-center sm:text-[20px] " + (content.startsWith("_") ? "opacity-0" : "")} key={content}>{content}</p>
                                 )))}
                             </div>
                         }
@@ -46,16 +46,6 @@ const RoadmapSection = () => {
             background: "/blue.png",
             title: "Short Term",
             contents: [
-                'Art Generations',
-                'VX Chambers',
-                'Raid to Earn'
-            ],
-            color: "#9D7C3220",
-        },
-        {
-            background: "/red.png",
-            title: "Medium Term",
-            contents: [
                 'DAO Building',
                 'Kickstart Branding',
                 'IRL Company',
@@ -64,12 +54,22 @@ const RoadmapSection = () => {
             color: "#9D7C3220",
         },
         {
-            background: "/gold.png",
-            title: "Long Term",
+            background: "/red.png",
+            title: "Mid Term",
             contents: [
                 'Profit Share',
                 'Process Automation',
                 'Upscaling'
+            ],
+            color: "#9D7C3220",
+        },
+        {
+            background: "/gold.png",
+            title: "Long Term",
+            contents: [
+                'Grow Across Germany',
+                'Expand to neighboring countries',
+                'Roll out the affiliate program to start scaling in eligible countries worldwide'
             ],
             color: "#0132B020",
         },
