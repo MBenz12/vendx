@@ -67,7 +67,7 @@ const GallerySection = () => {
                             <path d="M61.8425 0.389893L49.5102 8.61033H0.402771V0.389893H61.8425ZM61.8425 0.389893H154" stroke="black" strokeWidth="2" strokeMiterlimit="10" />
                         </svg>
                     </div>
-                    <p ref={textRef} className={"mt-[35px] max-w-[374px] w-full font-primary text-secondary text-[36px] leading-[42px] lg:text-2xl" + (inViewport ? " reveal-text" : "")}>
+                    <p ref={textRef} className={"mt-[35px] max-w-[374px] w-full font-primary text-secondary text-[25px]" + (inViewport ? " reveal-text" : "")}>
                         Hand drawn cyborgs ready to ready to take over Solana
                     </p>
                 </div>
