@@ -42,8 +42,7 @@ const IntroSection = () => {
                             <span className="text-primary">// A NEW ERA OF NFTS</span>
                         </div>
                         <div ref={textRef} className={"max-w-[650px] font-primary text-[25px] leading-[32px] flex justify-end text-secondary sm:order-[-1] sm:ml-auto sm:w-full reveal-text"}>
-                            Vending machines powered by NFTs. 
-                            Build with us by investing into thousands of vending machines across the world. 
+                            Vending machines powered by NFTs. Expanding world wide.
                             Earn passive income by holding a VendX NFT.
                         </div>
                     </div>
