@@ -1,5 +1,6 @@
 import { CircleDownIcon, PolygonIcon } from "components/svgs";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import RevealText from "components/RevealText";
 import { useInViewport } from "react-in-viewport";
 
 const IntroSection = () => {
@@ -18,6 +19,9 @@ const IntroSection = () => {
     }
     const textRef = useRef<any>();
     const { inViewport, enterCount } = useInViewport(textRef);
+    useEffect(() => {
+        RevealText();
+    }, [inViewport])
     return (
         <section className="section">
             <div className="container mt-[82px] md:mt-10">
