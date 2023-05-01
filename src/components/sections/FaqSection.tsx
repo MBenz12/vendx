@@ -11,7 +11,7 @@ const QuestionBox = ({ className, title, content, collapse = true, handleCollaps
                 </div>
             </div>
             <div className={"transition-all duration-1000 overflow-hidden " + (collapse ? "max-h-0": "max-h-[350px]")}>
-                <p className={"text-[30px] leading-[36px] sm:text-2xl xs:text-xl mt-[40px] sm:mt-5"}>{content}</p>
+                <p className={"text-[30px] leading-[36px] sm:text-2xl xs:text-xl mt-[40px] sm:mt-5"} dangerouslySetInnerHTML={{ __html: content }} />
             </div>
         </div>
     )
@@ -20,16 +20,16 @@ const QuestionBox = ({ className, title, content, collapse = true, handleCollaps
 const FaqSection = () => {
     const questions = [
         {
-            question: "WHEN MINT?",
-            answer: "April 2023",
+            question: "Rebirth (mint)",
+            answer: "May 2023",
         },
         {
-            question: "What is the supply?",
-            answer: " 9999 VX Cyborgs",
+            question: "Supply",
+            answer: "9999 Cyborgs<br/>630 OG-Cyborgs<br/>70 XX-Cyborgs (Females)",
         },
         {
-            question: "How much is mint?",
-            answer: "No matter what Solana will look like, we going with an estimated 120$ Value mint!",
+            question: "Mint Price",
+            answer: "No matter what Solana will look like, we going with an estimated 120$ Value mint! —> 4 $SOL",
         },
     ];
     const [collapses, setCollapses] = useState<boolean[]>([false, true, true, true]);

@@ -19,12 +19,12 @@ const RodmapBox = ({ background, title, contents, color }: { background: string,
                     </div>
                 </div>
                 <div className={"relative w-full h-full text-white flex justify-center " + (hover ? "bg-black/50 rounded-[15px]" : "")}>
-                    <div className={"flex flex-col justify-center items-center " + (!hover ? "mt-[30%]" : "gap-5")}>
-                        <p className={"font-primary " + (hover ? "text-gradient1 text-[40px] leading-[47px] sm:text-[30px]" : "text-[30px] sm:text-[24px]")}>{title}</p>
+                    <div className={"flex flex-col justify-center items-center " + (!hover ? "mt-[30%]" : "gap-5 sm:gap-0")}>
+                        <p className={"font-primary " + (hover ? "text-gradient1 text-[40px] leading-[47px] sm:text-[22px]" : "text-[30px] sm:text-[24px]")}>{title}</p>
                         {hover &&
-                            <div className="flex flex-col items-center gap-4">
+                            <div className="flex flex-col items-center gap-4 p-1">
                                 {contents.map((content => (
-                                    <p className={"text-white text-[25px] leading-[30px] text-center sm:text-[20px] " + (content.startsWith("_") ? "opacity-0" : "")} key={content}>{content}</p>
+                                    <p className={"text-white text-[25px] leading-[30px] text-center md:text-[16px] md:leading-[26px] " + (content.startsWith("_") ? "opacity-0" : "")} key={content}>{content}</p>
                                 )))}
                             </div>
                         }
@@ -44,32 +44,25 @@ const RoadmapSection = () => {
     const roadmap = [
         {
             background: "/blue.png",
-            title: "Short Term",
+            title: "Vending",
             contents: [
-                'DAO Building',
-                'Kickstart Branding',
-                'IRL Company',
-                'Web3 Partnerships'
+                'VendX will set up a mix of 105 machines in the city of Nuremberg and neighboring, then expand from there.'
             ],
             color: "#9D7C3220",
         },
         {
             background: "/red.png",
-            title: "Mid Term",
+            title: "Affiliate",
             contents: [
-                'Profit Share',
-                'Process Automation',
-                'Upscaling'
+                'The affiliate program is a form of growth mechanism to help us expand both the business and our network. Anyone can affiliate a machine and earn a direct % of that machine’s monthly revenue.'
             ],
             color: "#9D7C3220",
         },
         {
             background: "/gold.png",
-            title: "Long Term",
+            title: "Advertising!",
             contents: [
-                'Grow Across Germany',
-                'Expand to neighboring countries',
-                'Roll out the affiliate program to start scaling in eligible countries worldwide'
+                'Holders & VendX partners will have a chance to have their brand, product or art showcased on our Vending machines and VendX screens.'
             ],
             color: "#0132B020",
         },
@@ -86,7 +79,7 @@ const RoadmapSection = () => {
                         </div>
                     </div>
                     <p ref={textRef} className={"mt-[15px] max-w-[800px] font-primary text-[25px] text-secondary sm:text-2xl" + (inViewport && enterCount === 1 ? " reveal-text" : "")}>
-                        We have plans to expand across Germany & Europe. We have the connections, knowledge & tools to make VendX a revolutionary way to invest in a solid, stable & scalable business.
+                        VendX is the first official licensed Solana based Vending/Arcade business, and we aim to expand across Germany and neighboring countries.
                     </p>
                 </div>
                 <div className="w-full sm:px-5 px-10 grid grid-cols-3 items-center justify-center gap-[25px] my-10 lg:grid-cols-2 sm:grid-cols-1">
