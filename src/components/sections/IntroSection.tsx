@@ -46,7 +46,7 @@ const IntroSection = () => {
                             <span className="text-primary">{"// A New Era Begins…"}</span>
                         </div>
                         <div ref={textRef} className={"max-w-[700px] font-primary text-[25px] leading-[32px] flex justify-end text-secondary sm:order-[-1] sm:ml-auto sm:w-full " + (inViewport && enterCount === 1 ? " reveal-text" : "")}>
-                            Vending & Arcade machines powered by NFTs expanding worldwide.
+                            VendX is the first official licensed Solana based Vending/Arcade business, and we aim to expand across Germany and neighboring countries.
                         </div>
                     </div>
                 </div>

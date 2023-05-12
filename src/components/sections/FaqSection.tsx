@@ -29,7 +29,7 @@ const FaqSection = () => {
         },
         {
             question: "Mint Price",
-            answer: "No matter what Solana will look like, we going with an estimated 120$ Value mint! —> 4 $SOL",
+            answer: "4 $SOL",
         },
     ];
     const [collapses, setCollapses] = useState<boolean[]>([false, true, true, true]);

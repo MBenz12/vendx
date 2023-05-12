@@ -18,7 +18,6 @@ const GallerySection = () => {
         '/art1.png',
         '/art2.png',
         '/art3.png',
-        '/art4.png',
     ]);
     const [active, setActive] = useState(1);
     const textRef = useRef<any>();
@@ -68,7 +67,7 @@ const GallerySection = () => {
                         </svg>
                     </div>
                     <p ref={textRef} className={"mt-[35px] max-w-[374px] w-full font-primary text-secondary text-[25px]" + (inViewport && enterCount === 1 ? " reveal-text" : "")}>
-                        Hand drawn cyborgs ready to ready to take over Solana
+                        The chambers have ascended to earth, they are drawn to the innovators with the most curious hearts, each chamber will draw out it’s destined match and attach itself to the host creating The Original Cyborgs! The Originals will then travel from tribe to tribe, community to community, leaving a landmark in cities that hold the finest innovators…
                     </p>
                 </div>
                 <div className="carousel mx-[180px] flex-shrink-0 sm:mx-0">

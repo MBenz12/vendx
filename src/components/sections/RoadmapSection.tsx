@@ -60,7 +60,7 @@ const RoadmapSection = () => {
         },
         {
             background: "/gold.png",
-            title: "Advertising!",
+            title: "Advertising",
             contents: [
                 'Holders & VendX partners will have a chance to have their brand, product or art showcased on our Vending machines and VendX screens.'
             ],
@@ -70,17 +70,20 @@ const RoadmapSection = () => {
     return (
         <section className="section flex-col gap-[90px]" id='roadmap'>
             <div className='container my-10'>
-                <div className="ml-10">
-                    <div className="w-fit font-extrabold font-title text-[80px] md:text-[60px] sm:text-[40px] xs:text-3xl leading-[85px] md:leading-[65px] sm:leading-[35px] text-white">
-                        <div className={"relative" + (inViewport && enterCount === 1 ? " fo-mask" : "")}>
-                            <span className="white">
-                                {'// VENDMAP'}
-                            </span>
+                <div className='flex lg:flex-col gap-10 lg:gap-0 items-center lg:justify-center'>
+                    <div className="ml-10">
+                        <div className="w-fit font-extrabold font-title text-[80px] md:text-[60px] sm:text-[40px] xs:text-3xl leading-[85px] md:leading-[65px] sm:leading-[35px] text-white">
+                            <div className={"relative" + (inViewport && enterCount === 1 ? " fo-mask" : "")}>
+                                <span className="white">
+                                    {'// VENDMAP'}
+                                </span>
+                            </div>
                         </div>
+                        <p ref={textRef} className={"mt-[15px] max-w-[800px] font-primary text-[25px] text-secondary sm:text-2xl" + (inViewport && enterCount === 1 ? " reveal-text" : "")}>
+                            Our business model consists of 3 branches
+                        </p>
                     </div>
-                    <p ref={textRef} className={"mt-[15px] max-w-[800px] font-primary text-[25px] text-secondary sm:text-2xl" + (inViewport && enterCount === 1 ? " reveal-text" : "")}>
-                        VendX is the first official licensed Solana based Vending/Arcade business, and we aim to expand across Germany and neighboring countries.
-                    </p>
+                    <img src="/chart.png" alt="" width={400} />
                 </div>
                 <div className="w-full sm:px-5 px-10 grid grid-cols-3 items-center justify-center gap-[25px] my-10 lg:grid-cols-2 sm:grid-cols-1">
                     {roadmap.map((item) => (
